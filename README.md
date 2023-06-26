@@ -21,12 +21,13 @@ Join Baz the Bug Basher in a thrilling adventure at Tempelhofer Feld, Berlin, wh
 # Technologies Used 
 - HTML
 - CSS
-- JavaScript
+- JavaScript 
 - DOM Manipulation
 - JS Canvas
 - JS Classes
 - Local Storage 
 - JS Audio() and JS Image ()
+- Version control tool (Git/Github)
 
 # States 
 - Start Screen
