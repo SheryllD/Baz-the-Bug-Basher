@@ -1,4 +1,4 @@
-window.onload = function() {
+/*window.onload = function() {
     document.getElementById("start-button").onclick = function() {
         startGame();
     };
@@ -8,3 +8,15 @@ window.onload = function() {
         myGame.init();
     }
 };
+*/
+
+window.onload = () => {
+    document.getElementById("start-button").onclick = () => {
+        startGame();
+    }; 
+    document.getElementById("instructions-button").onclick = () => {
+        instructions.style.display = "block"; 
+        IntroText.style.display ="none";
+    }; 
+    
+}
