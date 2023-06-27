@@ -1,71 +1,106 @@
-* {font-family: 'Times New Roman', Times, serif;}
 body {
+    margin: ;
     padding: 0px;
     text-align: center;
-    display: flex;
-    margin: 0;
-    align-items: center;
-    background-color: bisque;
-}
-canvas {
-    border: 1px solid black;
-    float: center;
-}
-
-#game-intro {
-    padding: 20px 0px;
-}
-#game-container {
-    display: flex;
-    width: 100vw;
-    padding: 20px 0px;
-    justify-content: center;
-}
-#game-screen {
-    display: none;
-    align-content: center;
-    padding: 20px 0px;
-    overflow: hidden;
-    position: relative;
-    background-image: url(../images/abstract-bright-green-square-pixel-tile-mosaic-wall-background-texture_1258-72158.jpg);
-    background-size: cover;
-    animation: slide 5s linear infinite;
-}
-
-@keyframes slide {
-    0% {
-        background-position: 0 -1000px;
-    }
-    95% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 50px
-    }
-}
-
-#game-end {
-    display: none;
-}
-
-.game-intro p {
-    display: none;
-    font-size: 18px;
-}
-
-body button {
-    font-size: 30px;
-    background-color: cornflowerblue;
+    font-family:'Times New Roman', Times, serif
+    background-position: center;
+    background-color: white; 
     color: black;
+    background-size: 100% 200%;
+    font-size: 1.5em;
+  }
+  canvas {
+    border: 1px solid #aff2b4;
+    float :center;
+  }
+ 
+.logo {
+    width: 200px;
+    text-align: left;
+}
+
+//Avatars 
+
+.avatarBas {
+    width: 250px;}
+
+.avatarGabs {
+    width: 200px;}
+
+.avatarOllie{
+    width: 180px;}
+
+.avatarMagicMike {
+    width: 195px;}
+
+.avatarSherry {
+    width: 165px;}
+
+.juneBug {
+    width: 150px;}
+
+.box {
+    border: solid;
+    background-color: white; 
+    border-width: 5px;
+  }
+  
+  body button {
+    font-size: 30px;
+    background-color: #cce840;
+    color: rgb(100, 90, 0);
     padding: 20px 40px;
     border: 0;
     box-shadow: 0;
     border-radius: 5px;
     margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  #startscreen {
+    float: center;
+  }
+  
+  #game-screen {
+      float: center;
+      padding: 10px 0px;
+      background-image: 
+      background-position: left, right;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 20%, 20%;
+  }
+  
+  .gameover {
+    float: center;
+    padding: 20px 0px;
+  }
+
+  #score {
+    padding-right: 10px;
+    margin: 0px;
+  }
+  #lives {
+    padding : 0px;
+    margin: 0px;
+  }
+  #scoring {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+  }
+
+  .boxNoBorder {
+    background-color: rgba(0,0,0,.5);
+  }
+
+#avatar-junebug{ 
+width: 10px
+height: 10px
 }
 
 #arrowImage {
     width: 250px;
     height: 250px; 
 }
-

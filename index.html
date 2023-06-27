@@ -1,67 +1,96 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title> Baz the Bug Basher</title>
-<meta name="author" content="Sheryll Dumapal">
-<meta name="keywords" content="HTML, CSS, javascript, p5js, fullstack developer, webdeveloper, coding"> 
-<meta name="description" content="project for webdevelopment course of Ironhack bootcamp">
-
-<link rel="stylesheet" href="./css/style.css" /> 
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sheryll Dumapal">
+    <meta name="keywords" content="HTML, CSS, javascript, p5js, fullstack developer, webdeveloper, coding"> 
+    <meta name="description" content="project for webdevelopment course of Ironhack bootcamp"> 
+    <title>Baz the Bug Busher</title>
+   
+    <img src="./images/Bazthebugbusherlogo.jpeg" alt="Baz the Bug Busher" class="logo" />
+    <link rel="stylesheet" href="./css/style.css" /> 
 </head>
-<body> 
-<main>
 
-<div class="game-intro">
-<h1> Baz the Bug Basher</h1>
-<p> Join Baz the Bug Basher in a thrilling adventure at Tempelhofer Feld,
-Berlin, where a peaceful hot Sunday barbecue in June turns into a battle. </br>
-As the sun sets, an unexpected threat emerges – a horde of mischievous June Bugs! 
-Play as Baz the Bug Basher and embark on a mission to defend and face off these insects.</br> 
-Armed with only your bare hands, you must protect your companions, Gabs, Magic Mike, Sherry and Ollie.
-Your mission is clear: ensure the survival of your companions. </br> Defeat the June bugs and emerge as the 
-ultimate victor. But be warned, if any of your friends perish, the game is lost! Can you rise to the 
-challenge and save the day with your bare-handed heroics? </br> The destiny of your friends rests in your 
-hands! Become their fearless savior and eliminate the clumsy bugs.</p></h3>
-<img src="./images/basthebugbasherpicknickscreen.jpeg" alt="Bash the Bug Basher Screen Intro"/>
+  <body>
+    <div id="startscreen" class="box">
+      <h1>Baz the Bug Busher</h1>
+      <div class="instructions">
+      <h3>Welcome to Baz the Bug Basher</h3>
+      <div id="intro">
+        <p> Join Baz the Bug Basher in a thrilling adventure at Tempelhofer Feld, </br>
+            Berlin, where a peaceful Sunday barbecue in turns into a battle. </br>
+            As the sun sets, an unexpected threat emerges – a horde of mischievous June Bugs! </br>
+            Play as Baz the Bug Basher and embark on a mission to defend and face off these insects.</br> 
+            Armed with only your bare hands, you must protect your companions, Gabs, Magic Mike, Sherry and Ollie.</br>
+            Your mission is clear: ensure the survival of your companions. Defeat the bugs and emerge as the </br>
+            ultimate victor. But be warned, if any of your friends perish, the game is lost! </br>
+            Can you rise to the challenge and save the day with your bare-handed heroics? The destiny of your friends rests in your </br>
+            hands! Become their fearless savior and eliminate the clumsy bugs.</br>  </p>  
+        </div>
+    </div> 
+        <img src="./images/avatarbass.png" alt="Avatar Bas the Bug Busher" class="avatarBas" />
+        <img src="./images/avatar.gabs.png" alt="Avatar Gabs" class="avatarGabs" />
+        <img src="./images/avatar.oliva.png" alt="Avatar Ollie" class="avatarOllie" />
+        <img src="./images/avatarmagicmike.png" alt="Avatar Magic Mike" class="avatarMagicMike" />
+        <img src="./images/avatar.sherry.png" alt="Avatar Sherry" class="avatarSherry" />
+    </br>
+<div id="instructions"> 
+    <b>Instructions:</b></br>
+    <img id="arrowImage" src="./images/—Pngtree—keyboard arrow keys_7260323.png" alt="arrow-img"/>
 </br>
-</br>
-<button id="start-button"> Start Game</button>
-<button id="instructions-button"> Instructions</button>
-<div id="instructions:">
-    <span>Instructions</span></br>
     Move Baz using arrow keys:</br>
     Arrow left: Move Baz left.</br>
     Arrow right: Move Baz right.</br>
     Arrow up: Move Baz up.</br>
     Arrow down: Move Baz down.</br>
-   <b> Press Space to eliminate the June Bug.</b></br>    
+</br>
+    Press Space to Kill the Bug. 
 </div>
-<div id="game-board">
-<img id="arrowImage" src="./images/—Pngtree—keyboard arrow keys_7260323.png" alt="arrow-img"/>
-</div>
- <div id="game-container"></div>
-    <div> 
-    <h2>Stats</h2>
-    <p>Score: <span id="score">0</span></p>
-    <p>Lives:<span id="lives">3</span></p>
-</div>
-<div id="game-screen"></div>
+</br>
+      <button id="startButton">Start Game</button>
+      <button id="instructionsButton">Instructions</button>
+      <button id="muteBtn" onclick="toggleMute()">Music: <span id="muteText">off</span></button>
+    </div>
+</br>
+     <div id="game-screen" class="boxNoBorder">
+      <div id="scoring">
+        <p id="score">
+          <span> Score: </span>
+          <span id="score-num"> 0 </span>
+        </p>
+        <p id="lives">
+          <span> Lives: </span>
+          <span id="lives-num"> 3 </span>
+        </p>
+      </div>
+      <canvas id="canvas" width="1000" height="800"></canvas>
+    </div>
 
-<div id="game-end">
-<button id="restart-button"> Restart</button>
-<h1>Game Over</h1>
-</div>
+    <div class="gameOverBox">
+      <h1 id="gameOverTitle">GAME OVER</h1>
+      <p id="easter">Next time Better!</p>
 
-</main> 
-<script src="./jasmine/game.js"></script>
-<script src="./jasmine/script.js"></script>
-<script src="./jasmine/playerBaz.js"></script>
+      <img src="./images/avatarBazDefeated.png" alt="Avatar Baz defeated" class="avatarBazDefeated">
+      <img src="./images/junebug.png" alt="Avatar June Bug" class="juneBug" />
+
+      <p><span>Your score:</span> <span id="final-score"></span></p>
+      <button id="restartBtn">Try Again!</button>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/playerBaz.js."></script>
+    <script src="./js/junebugs.js"></script>
+  
+    <script src="./js/gabs.js"></script>
+     <script src="./js/magicmike.js"></script>
+    <script src="./js/ollie.js"></script>
+    <script src="./js/sherry.js"></script>
+
+    <audio id="gameAudio" src="sounds/gamemusicbaz.wav" controls></audio>
+ 
 </body>
 </html>
-
-
