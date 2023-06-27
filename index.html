@@ -16,7 +16,7 @@
 <body> 
 <main>
 
-<div classs="game-intro">
+<div class="game-intro">
 <h1> Baz the Bug Basher</h1>
 <p> Join Baz the Bug Basher in a thrilling adventure at Tempelhofer Feld,
 Berlin, where a peaceful hot Sunday barbecue in June turns into a battle. </br>
@@ -32,7 +32,7 @@ hands! Become their fearless savior and eliminate the clumsy bugs.</p></h3>
 </br>
 <button id="start-button"> Start Game</button>
 <button id="instructions-button"> Instructions</button>
-<b><div id="instructions:"> </b>
+<div id="instructions:">
     <span>Instructions</span></br>
     Move Baz using arrow keys:</br>
     Arrow left: Move Baz left.</br>
@@ -42,32 +42,25 @@ hands! Become their fearless savior and eliminate the clumsy bugs.</p></h3>
    <b> Press Space to eliminate the June Bug.</b></br>    
 </div>
 <div id="game-board">
-
 <img id="arrowImage" src="./images/—Pngtree—keyboard arrow keys_7260323.png" alt="arrow-img"/>
-
- <div id="game-container"></div> 
+</div>
+ <div id="game-container"></div>
+    <div> 
     <h2>Stats</h2>
     <p>Score: <span id="score">0</span></p>
     <p>Lives:<span id="lives">3</span></p>
 </div>
 <div id="game-screen"></div>
-</div>
 
 <div id="game-end">
 <button id="restart-button"> Restart</button>
 <h1>Game Over</h1>
-
 </div>
-</main>
- <footer> Game created by Sheryll Dumapal </footer>   
-<script type="text/javascript" src="./jasmine/script.js"></script>
-<script type="text/javascript" src="./jasmine/game.js"></script>
-<script type="text/javascript" src="./jasmine/playerBaz.js"></script>
-<script type="text/javascript" src="./jasmine/gabs.js"></script>
-<script type="text/javascript" src="./jasmine/junebugs.js"></script>
-<script type="text/javascript" src="./jasmine/magicmike.js"></script>
-<script type="text/javascript" src="./jasmine/ollie.js"></script>
-<script type="text/javascript" src="./jasmine/sherry.js"></script>
+
+</main> 
+<script src="./jasmine/game.js"></script>
+<script src="./jasmine/script.js"></script>
+<script src="./jasmine/playerBaz.js"></script>
 </body>
 </html>
 
