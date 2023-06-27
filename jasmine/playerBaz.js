@@ -1,74 +1,64 @@
-class Game { 
-    constructor() {
-        this.startScreen = document.getElementById("game-intro");
-        this.gameScreen = document.getElementById("game-screen");
-        this.gameEndScreen = document.getElementById("game-end");
-        this.player = new Player(this.gameScreen);
-        this.height = 600;
-        this.width = 500;
-        this.obstacles = [];
-        this.score = 0;
-        this.lives = 3;
-        this.animated; 
-        this.gameIsOver = false;    
-    }
+class Player {
+  constructor(gameScreen, left, top, width, height, imgSrc) {
+    this.gameScreen = gameScreen;
+    this.left = left;
+    this.top = top;
+    this.width = width;
+    this.height = height;
+    this.directionX = 0;
+    this.directionY = 0;
+    this.element = document.createElement("img");
 
-    start() {
-        this.gameScreen.style.height = `${this.height}px`; 
-        this.gameScreen.style.width = `${this.width}px`;
+    this.element.src = imgSrc;
+    this.element.style.position = "absolute";
+    this.element.style.width = `${width}px`;
+    this.element.style.height = `${height}px`;
+    this.element.style.left = `${left}px`;
+    this.element.style.top = `${top}px`;
 
-        this.startScreen.style.display = "none";
-        this.gameScreen.style.display = "block"; 
+    this.gameScreen.appendChild(this.element);
+  }
 
-        this.gameLoop();
-    }
-
-    gameLoop() {
-        this.update()
-        console.log("this.animateId"); 
-        if (this.animated % 200 === 0) {
-            this.obstacles.push(new this.obstacles(this.gameScreen))
-        }
-        if (this.gameIsOver) {
-            this.endGame()
-        } else {
-            this.animatedId = requestAnimationFrame(() => this.gameLoop())
-        }
-    }
-
-    update() {
-        this.player.move()
-        const obstaclesToKeep = []
-        this.obstacles.forEach(obstacle => {
-          obstacle.move()
-          if (this.player.didCollide(obstacle)) {
-            obstacle.element.remove()
-            this.lives -= 1
-          } else if (obstacle.top > this.gameScreen.offsetHeight) {
-            this.score += 1
-          } else {
-            obstaclesToKeep.push(obstacle)
-          }
-        })
-        this.obstacles = obstaclesToKeep
+  move() {
+    this.left += this.directionX;
+    this.top += this.directionY;
     
-        if (this.lives <= 0) {
-          this.isGameOver = true
-        }
-      }
+    if (this.left < 10) {
+      this.left = 10;
+    }
+    if (this.top < 10) {
+      this.top = 10;
+    }
 
-      endGame() {
-        this.player.element.remove()
-        this.obstacles.forEach(obstacle => obstacle.element.remove())
-    
-        // Hide game screen
-        this.gameScreen.style.display = 'none'
-        // Show end game screen
-        this.gameEndScreen.style.display = 'block'
+    if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
+      this.left = this.gameScreen.offsetWidth - this.width - 10;
+    }
 
-window.requestAnimationFrame(() => this.gameLoop()); 
+    if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
+      this.top = this.gameScreen.offsetHeight - this.height - 10;
+    }
 
-update() {
-    console.log("in the update"); 
-}
+    this.updatePosition();
+  }
+
+  updatePosition() {
+    this.element.style.left = `${this.left}px`;
+    this.element.style.top = `${this.top}px`;
+  }
+
+  didCollide(obstacle) {
+    const playerRect = this.element.getBoundingClientRect();
+    const obstacleRect = obstacle.element.getBoundingClientRect();
+
+    if (
+      playerRect.left < obstacleRect.right &&
+      playerRect.right > obstacleRect.left &&
+      playerRect.top < obstacleRect.bottom &&
+      playerRect.bottom > obstacleRect.top
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
