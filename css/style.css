@@ -40,7 +40,7 @@ body {
   position: relative; 
   background-image: url(../images/abstract-bright-green-square-pixel-tile-mosaic-wall-background-texture.jpg); 
   background-size: cover;
-  animation: slide 1s linear infinite; 
+  animation: slide 5s linear infinite; 
   }
 
 .avatarBas {

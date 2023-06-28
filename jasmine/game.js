@@ -76,5 +76,5 @@ class Game {
 
     this.gameScreen.style.display = "none";
     this.gameEndScreen.style.display = "block";
+  } 
   }
-}

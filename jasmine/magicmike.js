@@ -18,9 +18,30 @@ class MagicMike {
       this.element.style.left = `${this.left}px`;
       this.element.style.top = `${this.top}px`;
     }
-  
+ 
     move() {
-      this.top += 1;
-      this.updatePosition();
+        setInterval(() => {
+          const randomDirection = Math.floor(Math.random() * 4); // Randomly choose a direction (0-3)
+    
+          // Move MagicMike based on the chosen direction
+          switch (randomDirection) {
+            case 0: // Move up
+              this.top -= 6;
+              break;
+            case 1: // Move down
+              this.top += 6;
+              break;
+            case 2: // Move left
+              this.left -= 6;
+              break;
+            case 3: // Move right
+              this.left += 6;
+              break;
+            default:
+              break;
+          }
+    
+          this.updatePosition();
+        }, 1000);
+      }
     }
-  }
