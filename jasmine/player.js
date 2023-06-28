@@ -1,26 +1,27 @@
 class Player {
-  constructor(gameScreen, left, top, width, height, imgSrc) {
+  constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    //this.left = left;
-    //this.top = top;
-    this.width = 80;
-    this.height = 150;
-    //this.directionX = 0;
-    //this.directionY = 0;
-    //this.element = document.createElement("img");
+    this.left = 600;
+    this.top = 600;
+    this.width = 100;
+    this.height = 100;
+    this.directionX = 0;
+    this.directionY = 0;
+    this.element = document.createElement("img");
     this.element.src = './images/avatarbass.png';
-    this.gameScreen.appendChild(this.element);
     this.element.style.position = "absolute";
-    this.element.style.width = `${width}px`;
-    this.element.style.height = `${height}px`;
-    //this.element.style.left = `${left}px`;
-    //this.element.style.top = `${top}px`;
+    this.gameScreen.appendChild(this.element);
+
+    this.element.style.width = `${this.width}px`;
+    this.element.style.height = `${this.height}px`;
+    this.element.style.left = `${this.left}px`;
+    this.element.style.top = `${this.top}px`;
   }
 
   move() {
     this.left += this.directionX;
     this.top += this.directionY;
-    
+
     if (this.left < 10) {
       this.left = 10;
     }
@@ -28,12 +29,12 @@ class Player {
       this.top = 10;
     }
 
-    if (this.left > this.gameScreen.offsetWidth - this.width - 10) {
-      this.left = this.gameScreen.offsetWidth - this.width - 10;
+    if (this.left > this.gameScreen.offsetWidth - this.width - 60) {
+      this.left = this.gameScreen.offsetWidth - this.width - 60;
     }
 
-    if (this.top > this.gameScreen.offsetHeight - this.height - 10) {
-      this.top = this.gameScreen.offsetHeight - this.height - 10;
+    if (this.top > this.gameScreen.offsetHeight - this.height - 60) {
+      this.top = this.gameScreen.offsetHeight - this.height - 60;
     }
 
     this.updatePosition();

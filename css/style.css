@@ -9,17 +9,39 @@ body {
     background-size: 100% 200%;
     font-size: 1.5em;
   }
-  canvas {
-    border: 1px solid #aff2b4;
-    float :center;
-  }
-
+  
 .logo {
     width: 200px;
     text-align: left;
 }
 
-//Avatars 
+#game-intro {
+  padding: 20px 0px
+}
+
+.game-intro p {
+  font-size: 18px;
+  font-family: "Verdana";
+}
+
+#game-container {
+  display: flex;
+  width: 100vw;
+  padding: 200px 0px;
+  justify-content: center;
+}
+
+#game-screen {
+  display: none;
+  align-content: center;
+  padding: 450px 450px;
+  margin: 0 0px;
+  overflow: hidden;
+  position: relative; 
+  background-image: url(../images/abstract-bright-green-square-pixel-tile-mosaic-wall-background-texture.jpg); 
+  background-size: cover;
+  animation: slide 1s linear infinite; 
+  }
 
 .avatarBas {
     width: 250px;}
@@ -48,47 +70,18 @@ body {
   body button {
     font-size: 30px;
     background-color: #cce840;
-    color: rgb(100, 90, 0);
+    color: rgb(61, 61, 22);
     padding: 20px 40px;
     border: 0;
     box-shadow: 0;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
   }
-#game-intro {
-  padding: 20px 0px
+  
+#game-end {
+display: none;
 }
-
-  #startscreen {
-    float: center;
-  }
-
-  #game-container {
-    display: flex;
-    width: 100vw;
-    padding: 20px 0px;
-    justify-content: center;
-  }
-  
-#game-screen {
-  display: none;
-  align-content: center;
-  padding: 500px 40px;
-  margin: 0 30px;
-  overflow: hidden;
-  position: relative; 
-  background-image: url(../images/abstract-bright-green-square-pixel-tile-mosaic-wall-background-texture.jpg); 
-  background-size: cover;
-  animation: slide 5s linear infinite; 
-  width: 1800px; 
-  height: 300px; 
-  }
-  
-.gameover {
-    float: center;
-    padding: 20px 0px;
-  }
 
 #score {
     padding-right: 10px;
@@ -108,13 +101,13 @@ margin: 0px;
 font-size: 20px;
 }
 
-  .boxNoBorder {
-    background-color: rgba(0,0,0,.5);
+.boxNoBorder {
+  background-color: rgba(0,0,0,.5);
   }
 
 #avatar-junebug{ 
-width: 10px
-height: 10px
+width: 100px
+height: 100px
 }
 
 #arrowImage {

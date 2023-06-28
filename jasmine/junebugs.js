@@ -1,8 +1,8 @@
 class Obstacle {
     constructor(gameScreen) {
       this.gameScreen = gameScreen;
-      this.left = Math.floor(Math.random() * 300 + 70);
-      this.top = -150;
+      this.left = Math.floor(Math.random() * 600 + 70);
+      this.top = -900;
       this.width = 100;
       this.height = 150;
       this.element = document.createElement("img");
@@ -20,7 +20,7 @@ class Obstacle {
     }
   
     move() {
-      this.top += 3;
+      this.top += 5;
       this.updatePosition();
     }
   }

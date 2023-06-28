@@ -12,53 +12,49 @@
 </head>
 <body>
 <main>
-     
+  <img src="./images/Bazthebugbusherlogo.jpeg" alt="Baz the Bug Busher" class="logo" />
+  <p> 
+    Join Baz the Bug Basher in a thrilling adventure at Tempelhofer Feld, </br>
+    Berlin, where a peaceful Sunday barbecue in turns into a battle. </br>
+    As the sun sets, an unexpected threat emerges – a horde of mischievous June Bugs! </br>
+    Play as Baz the Bug Basher and embark on a mission to defend and face off these insects.</br> 
+    Armed with only your bare hands, you must protect your companions, Gabs, Magic Mike, Sherry and Ollie.</br>
+    Your mission is clear: ensure the survival of your companions. Defeat the bugs and emerge as the </br>
+    ultimate victor. But be warned, if any of your friends perish, the game is lost! </br>
+    Can you rise to the challenge and save the day with your bare-handed heroics? The destiny of your friends rests in your </br>
+    hands! Become their fearless savior and eliminate the clumsy bugs.</br>  
+    </p>  
+    <img src="./images/avatarbass.png" alt="Avatar Bas the Bug Busher" class="avatarBas" />
+    <img src="./images/avatar.gabs.png" alt="Avatar Gabs" class="avatarGabs" />
+    <img src="./images/avatar.oliva.png" alt="Avatar Ollie" class="avatarOllie" />
+    <img src="./images/avatarmagicmike.png" alt="Avatar Magic Mike" class="avatarMagicMike" />
+    <img src="./images/avatar.sherry.png" alt="Avatar Sherry" class="avatarSherry" />
+    <br>
 <div id="game-intro"> 
-<img src="./images/Bazthebugbusherlogo.jpeg" alt="Baz the Bug Busher" class="logo" />
-<h1>Baz the Bug Busher</h1>
-<p> 
-Join Baz the Bug Basher in a thrilling adventure at Tempelhofer Feld, </br>
-Berlin, where a peaceful Sunday barbecue in turns into a battle. </br>
-As the sun sets, an unexpected threat emerges – a horde of mischievous June Bugs! </br>
-Play as Baz the Bug Basher and embark on a mission to defend and face off these insects.</br> 
-Armed with only your bare hands, you must protect your companions, Gabs, Magic Mike, Sherry and Ollie.</br>
-Your mission is clear: ensure the survival of your companions. Defeat the bugs and emerge as the </br>
-ultimate victor. But be warned, if any of your friends perish, the game is lost! </br>
-Can you rise to the challenge and save the day with your bare-handed heroics? The destiny of your friends rests in your </br>
-hands! Become their fearless savior and eliminate the clumsy bugs.</br>  
-</p>  
-<img src="./images/avatarbass.png" alt="Avatar Bas the Bug Busher" class="avatarBas" />
-<img src="./images/avatar.gabs.png" alt="Avatar Gabs" class="avatarGabs" />
-<img src="./images/avatar.oliva.png" alt="Avatar Ollie" class="avatarOllie" />
-<img src="./images/avatarmagicmike.png" alt="Avatar Magic Mike" class="avatarMagicMike" />
-<img src="./images/avatar.sherry.png" alt="Avatar Sherry" class="avatarSherry" />
-<br>
-<br>
-<b>Instructions:</b>
-<br>
+<p><b>Instructions:</b></p>
 <img id="arrowImage" src="./images/—Pngtree—keyboard arrow keys_7260323.png" alt="arrow-img"/>
-<br>
-Move Baz using arrow keys:<br>
+<p>Move Baz using arrow keys:<br>
 Arrow left: Move Baz left.<br>
 Arrow right: Move Baz right.<br>
 Arrow up: Move Baz up.<br>
 Arrow down: Move Baz down.</br>
 
 Press Space to Kill the Bug. </br>
-<br>
+<br></p>
 <button id="start-button">Start Game</button>
 <button id="muteBtn" onclick="toggleMute()">Music: <span id="muteText">off</span></button>
 <br>
 </div>
 
 <div id="game-container"> 
+</div>
 <h4>Stats: </h4>
-</br>
 <p>Score: <span id="score">0</span></p>
 <p>Lives: <span id="lives">3</span></p>
 </div>
 
-<div id="game-screen"></div>
+<div id="game-screen">
+</div>
 
 <div id="game-end">
 <img src="./images/avatarBazDefeated.png" alt="Avatar Baz defeated" class="avatarBazDefeated" />
@@ -67,6 +63,7 @@ Press Space to Kill the Bug. </br>
 <button id="restart-button">Restart</button>
 </div>
 </main>
+
 <script type="text/javascript" src="jasmine/game.js"></script>
 <script type="text/javascript" src="jasmine/player.js"></script>
 <script type="text/javascript" src="jasmine/script.js"></script>
@@ -80,6 +77,5 @@ Press Space to Kill the Bug. </br>
     <audio id="gameAudio" controls>
       <source src="sounds/gamemusicbaz.wav" type="audio/wav" />
     </audio>
-
 </body>
 </html>
