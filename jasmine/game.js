@@ -1,13 +1,13 @@
-class Game { 
+class game { 
   constructor() {
     this.startScreen = document.getElementById("game-intro");
-    this.gameScreen = document.getElementById("game-container");
+    this.gameContainer = document.getElementById("game-container");
     this.gameEndScreen = document.getElementById("game-end");
     this.gameScreen = document.getElementById("game-screen");
     this.scoreElement = document.getElementById("score");
     this.livesElement = document.getElementById("lives");
     this.player = new Player(this.gameScreen, 250, 600, 150, 200, "../images/avatarbass.png");
-
+   
     this.height = 600;
     this.width = 500;
     this.obstacles = [new Obstacle(this.gameScreen)];
@@ -19,6 +19,9 @@ class Game {
   }
 
   start() {
+    this.gameScreen.style.width = this.width = `${this.width}px`;
+    this.gameEndScreen.style.height = this.height = `${this.height}px`;
+
     this.startScreen.style.display = "none";
     this.gameScreen.style.display = "block"; 
     this.update();

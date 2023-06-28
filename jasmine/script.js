@@ -20,9 +20,24 @@
     }; 
 }
 */ 
-window.onload = function () {
-    const startButton = document.getElementById("start-button");
-    const restartButton = document.getElementById("restart-button");
+
+window.addEventListener('load', () => {
+  const startButton = document.getElementById("start-button");
+  const restartButton = document.getElementById("restart-button");
+  
+  function startGame() {
+    console.log("start game")
+    game = new game()
+    game.start()
+
+  }  
+
+  startButton.addEventListener("click", function () {
+    startGame();
+  }); 
+})
+
+  /* 
     const gameScreen = document.getElementById("game-screen");
     const game = new Game();
   
