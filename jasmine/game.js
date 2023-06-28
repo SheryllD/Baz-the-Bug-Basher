@@ -7,6 +7,11 @@ class Game {
     this.scoreElement = document.getElementById("score");
     this.livesElement = document.getElementById("lives");
     this.player = new Player(this.gameScreen);
+    this.sherry = new Sherry(this.gameScreen);
+    this.ollie = new Ollie(this.gameScreen);
+    this.magicmike = new MagicMike(this.gameScreen);
+    this.gabs = new Gabs(this.gameScreen);
+  
    
     this.height = 600;
     this.width = 500;
